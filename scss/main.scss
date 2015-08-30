@@ -1,0 +1,66 @@
+@import "default";
+@import "normalize";
+
+body {
+  position: relative;
+}
+
+button {
+  margin-top: 4%;
+}
+
+//                           Nav                      //
+
+.navbar {
+  border-color: #fff;
+  background: #fff;
+  margin: 2% 5%;
+}
+
+//                           Header                      //
+header {
+  margin: 15% 20% 20% 20%;
+  font-size: 1.2em;
+  p:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  p:nth-child(2) {
+    margin-bottom: 43px;
+  }
+}
+
+//                           About Me                      //
+#about-me {
+  width: 100%;
+  padding: 20%;
+  font-size: 1.2em;
+  background: #E8E5E5;
+}
+
+//                           Portfolio                      //
+#portfolio {
+  margin: 10%;
+}
+
+img {
+  max-width: 50%;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+//                           Footer                      //
+
+footer {
+  width: 100%;
+  .panel-footer {
+    padding: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+    background: #E8E5E5;
+  }
+}
