@@ -1,74 +1,129 @@
 @import "default";
 @import "normalize";
 
+// colors //
+$white: #ecf0f1;
+$dark: #7A7D7E;
+$bg: #ecf0f1;
+$bg-dark: #272624;
+
+// font-family //
+$light: 300;
+$bold: 700;
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 body {
   position: relative;
+  background: $bg;
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  letter-spacing: 0.02em;
 }
 
 button {
-  margin-top: 4%;
+  margin-top: 5%;
 }
 
 //                           Nav                      //
 
 .navbar {
-  border-color: #fff;
-  background: #fff;
+  border-color: $bg;
+  background: $bg;
   margin: 2% 5%;
+  .navbar-brand {
+    color: $dark;
+  }
+  #myNavbar > ul > li > a {
+    color: $dark;
+    :hover {
+      color: $white;
+    }
+  }
 }
 
 //                           Header                      //
 header {
   margin: 15% 20% 20% 20%;
-  font-size: 1.2em;
-  p:nth-child(1) {
-    margin-bottom: 20px;
+  color: $dark;
+  p:first-child {
+    font-size: 1.3em;
+    font-weight: $bold;
   }
   p:nth-child(2) {
-    margin-bottom: 43px;
+    font-size: 2.5em;
+    font-weight: $bold;
+  }
+  p:last-of-type {
+    font-size: 1.2em;
+    font-weight: $light;
   }
 }
 
 //                           About Me                      //
 #about-me {
   width: 100%;
-  padding: 20%;
-  font-size: 1.2em;
-  background: #E8E5E5;
+  padding: 20% 3%;
+  background: $bg-dark;
+  color: $dark;
+  center {
+    // border: 2px solid $dark;
+    // padding: 8%;
+
+  }
+  p {
+    font-size: 1.2em;
+    font-weight: $light;
+  }
 }
 
 //                           Portfolio                      //
 #portfolio {
   margin: 10%;
+  color: $dark;
+  section {
+    margin: 5%;
+    padding: 5% 3%;
+  }
+  h4 {
+    font-size: 1.3em;
+    font-weight: $bold;
+  }
+  h3 {
+    font-size: 1.3em;
+    font-weight: $bold;
+  }
+  p {
+    font-size: 1.2em;
+    font-weight: $light;
+  }
 }
 
 img {
-  display: flex;
-  flex-grow: 5;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  width: 100%;
 }
 
 //                           Footer                      //
 
 footer {
   width: 100%;
+  color: $dark;
   .panel-footer {
     padding: 10%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2em;
-    background: #E8E5E5;
+    background: $bg-dark;
+    h3 {
+      font-size: 1.3em;
+      font-weight: $bold;
+    }
+  }
+  a {
+    color: $white;
   }
 }

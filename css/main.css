@@ -554,62 +554,79 @@ th {
    Author's custom styles
    ========================================================================== */
 body {
-  position: relative; }
+  position: relative;
+  background: #ecf0f1;
+  font-family: 'Work Sans', sans-serif; }
+
+p {
+  letter-spacing: 0.02em; }
 
 button {
-  margin-top: 4%; }
+  margin-top: 5%; }
 
 .navbar {
-  border-color: #fff;
-  background: #fff;
+  border-color: #ecf0f1;
+  background: #ecf0f1;
   margin: 2% 5%; }
+  .navbar .navbar-brand {
+    color: #7A7D7E; }
+  .navbar #myNavbar > ul > li > a {
+    color: #7A7D7E; }
+    .navbar #myNavbar > ul > li > a :hover {
+      color: #ecf0f1; }
 
 header {
   margin: 15% 20% 20% 20%;
-  font-size: 1.2em; }
-  header p:nth-child(1) {
-    margin-bottom: 20px; }
+  color: #7A7D7E; }
+  header p:first-child {
+    font-size: 1.3em;
+    font-weight: 700; }
   header p:nth-child(2) {
-    margin-bottom: 43px; }
+    font-size: 2.5em;
+    font-weight: 700; }
+  header p:last-of-type {
+    font-size: 1.2em;
+    font-weight: 300; }
 
 #about-me {
   width: 100%;
-  padding: 20%;
-  font-size: 1.2em;
-  background: #E8E5E5; }
+  padding: 20% 3%;
+  background: #272624;
+  color: #7A7D7E; }
+  #about-me p {
+    font-size: 1.2em;
+    font-weight: 300; }
 
 #portfolio {
-  margin: 10%; }
+  margin: 10%;
+  color: #7A7D7E; }
+  #portfolio section {
+    margin: 5%;
+    padding: 5% 3%; }
+  #portfolio h4 {
+    font-size: 1.3em;
+    font-weight: 700; }
+  #portfolio h3 {
+    font-size: 1.3em;
+    font-weight: 700; }
+  #portfolio p {
+    font-size: 1.2em;
+    font-weight: 300; }
 
 img {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 5;
-  -webkit-flex-grow: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5; }
-
-section {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  width: 100%; }
 
 footer {
-  width: 100%; }
+  width: 100%;
+  color: #7A7D7E; }
   footer .panel-footer {
     padding: 10%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2em;
-    background: #E8E5E5; }
+    background: #272624; }
+    footer .panel-footer h3 {
+      font-size: 1.3em;
+      font-weight: 700; }
+  footer a {
+    color: #ecf0f1; }
