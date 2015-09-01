@@ -554,9 +554,9 @@ th {
    Author's custom styles
    ========================================================================== */
 body {
-  position: relative;
   background: #ecf0f1;
-  font-family: 'Work Sans', sans-serif; }
+  font-family: 'Work Sans', sans-serif;
+  width: 100%; }
 
 p {
   letter-spacing: 0.02em; }
@@ -567,7 +567,9 @@ button {
 .navbar {
   border-color: #ecf0f1;
   background: #ecf0f1;
-  padding: 1% 5% 1% 5%; }
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 1.5%; }
   .navbar .navbar-brand {
     color: #7A7D7E; }
   .navbar #myNavbar > ul > li > a {
@@ -575,13 +577,15 @@ button {
     .navbar #myNavbar > ul > li > a :hover {
       color: #ecf0f1; }
 
+.navbar-default .navbar-toggle {
+  border: none; }
+
 header {
-  margin: 15% 20% 20% 20%;
+  height: 100vh;
   color: #7A7D7E; }
+  header center {
+    padding: 27% 15%; }
   header p:first-child {
-    font-size: 1.3em;
-    font-weight: 700; }
-  header p:nth-child(2) {
     font-size: 2.5em;
     font-weight: 700; }
   header p:last-of-type {
@@ -593,6 +597,12 @@ header {
   padding: 20% 3%;
   background: #272624;
   color: #7A7D7E; }
+  #about-me center {
+    border: 2px solid #7A7D7E;
+    padding: 8%; }
+  #about-me h2 {
+    font-size: 4em;
+    font-weight: 700; }
   #about-me p {
     font-size: 1.2em;
     font-weight: 300; }
@@ -600,14 +610,15 @@ header {
 #portfolio {
   color: #7A7D7E; }
   #portfolio section {
-    margin: 1%;
-    width: 370px; }
+    margin: 10% 0.5% 10% 0.5%;
+    max-width: 470px; }
+  #portfolio h2 {
+    font-weight: 700;
+    margin-top: 10%; }
   #portfolio h4 {
-    font-size: 1.3em;
-    font-weight: 700; }
-  #portfolio h3 {
-    font-size: 1.3em;
-    font-weight: 700; }
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 10%; }
   #portfolio p {
     font-size: 1.2em;
     font-weight: 300; }
@@ -617,7 +628,6 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border: 10px solid red;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -632,11 +642,12 @@ footer {
   width: 100%;
   color: #7A7D7E; }
   footer .panel-footer {
-    padding: 10%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20% 3%;
     font-size: 1.2em;
     background: #272624; }
+    footer .panel-footer center {
+      border: 2px solid #7A7D7E;
+      padding: 8%; }
     footer .panel-footer h3 {
       font-size: 1.3em;
       font-weight: 700; }
