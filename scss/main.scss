@@ -34,7 +34,7 @@ button {
 .navbar {
   border-color: $bg;
   background: $bg;
-  margin: 2% 5%;
+  padding: 1% 5% 1% 5%;
   .navbar-brand {
     color: $dark;
   }
@@ -83,11 +83,10 @@ header {
 
 //                           Portfolio                      //
 #portfolio {
-  margin: 10%;
   color: $dark;
   section {
-    margin: 5%;
-    padding: 5% 3%;
+    margin: 1%;
+    width: 370px;
   }
   h4 {
     font-size: 1.3em;
@@ -101,6 +100,13 @@ header {
     font-size: 1.2em;
     font-weight: $light;
   }
+}
+
+.flex-container {
+  display: flex;
+  border: 10px solid red;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 img {
@@ -121,6 +127,9 @@ footer {
     h3 {
       font-size: 1.3em;
       font-weight: $bold;
+    }
+    p {
+      margin-top: 3%;
     }
   }
   a {
