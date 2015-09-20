@@ -1,5 +1,5 @@
 var currentText = 0;
-var headerText = [" Design...", " Develop...", " Git Init...", " Commit...", " Have Fun!"];
+var headerText = ["But most of all I have Fun!", "I'm Carlos", "I love to Design...", "I love to Develop...", "I like to Git Init...", "I tend to Commit..."];
 var divText = document.getElementById("text-to-toggle");
 
 document.onload = setTimeout(function(){changeHeaderText();}, 1000);
