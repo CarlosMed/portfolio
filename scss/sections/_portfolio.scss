@@ -1,0 +1,50 @@
+//                           Portfolio                      //
+#portfolio {
+  color: $dark;
+
+  section {
+    margin: 10% 0.5% 10% 0.5%;
+    width: 46%;
+
+    &:hover {
+      box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21);
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 460px;
+    }
+  }
+
+  h2 {
+    font-size: 4em;
+    font-weight: $bold;
+    margin-top: 10%;
+  }
+
+  h4 {
+    font-size: 1.5em;
+    font-weight: $bold;
+    margin-top: 10%;
+
+    // margin-bottom: 10%;
+
+  }
+
+  p {
+    margin: 6% 16px 10% 16px;
+    font-size: 1.2em;
+    font-weight: $light;
+  }
+}
+
+.flex-container {
+  display: flex;
+
+  // border: 10px solid red;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+img {
+  width: 100%;
+}

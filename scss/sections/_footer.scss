@@ -1,0 +1,30 @@
+//                           Footer                      //
+
+footer {
+  width: 100%;
+  color: $dark;
+
+  .panel-footer {
+    padding: 20% 3%;
+    font-size: 1.2em;
+    background: $bg-dark;
+
+    center {
+      border: 2px solid $dark;
+      padding: 8%;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      font-weight: $bold;
+    }
+
+    p {
+      margin-top: 3%;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}

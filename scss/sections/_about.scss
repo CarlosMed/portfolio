@@ -1,0 +1,22 @@
+//                           About Me                      //
+#about-me {
+  width: 100%;
+  padding: 20% 3%;
+  background: $bg-dark;
+  color: $dark;
+
+  center {
+    border: 2px solid $dark;
+    padding: 8%;
+  }
+
+  h2 {
+    font-size: 4em;
+    font-weight: $bold;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: $light;
+  }
+}
