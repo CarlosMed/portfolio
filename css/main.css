@@ -580,6 +580,18 @@ button {
 .navbar-default .navbar-toggle {
   border: none; }
 
+.logo {
+  position: absolute;
+  top: 7px;
+  width: 50px;
+  margin-bottom: 32px; }
+  @media screen and (max-width: 600px) {
+    .logo {
+      position: absolute;
+      top: 6px;
+      width: 12%;
+      margin-bottom: 32px; } }
+
 header {
   height: 100vh;
   color: #7A7D7E; }
@@ -611,8 +623,14 @@ header {
   color: #7A7D7E; }
   #portfolio section {
     margin: 10% 0.5% 10% 0.5%;
-    max-width: 470px; }
+    width: 46%; }
+    #portfolio section:hover {
+      box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); }
+    @media screen and (max-width: 600px) {
+      #portfolio section {
+        width: 460px; } }
   #portfolio h2 {
+    font-size: 4em;
     font-weight: 700;
     margin-top: 10%; }
   #portfolio h4 {
@@ -620,6 +638,7 @@ header {
     font-weight: 700;
     margin-top: 10%; }
   #portfolio p {
+    margin: 6% 16px 10% 16px;
     font-size: 1.2em;
     font-weight: 300; }
 
