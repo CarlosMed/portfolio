@@ -8,6 +8,7 @@ header {
   }
 
   p:first-child {
+    min-height: 50px;
     font-size: 2.5em;
     font-weight: $bold;
   }

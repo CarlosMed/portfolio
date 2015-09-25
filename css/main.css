@@ -156,7 +156,8 @@ textarea {
     color: #000 !important;
     /* Black prints faster:
        http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important; }
   a,
   a:visited {
@@ -368,7 +369,9 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 /**
@@ -473,7 +476,9 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -494,7 +499,9 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   /* 2 */ }
 
 /**
@@ -598,6 +605,7 @@ header {
   header center {
     padding: 27% 15%; }
   header p:first-child {
+    min-height: 50px;
     font-size: 2.5em;
     font-weight: 700; }
   header p:last-of-type {
@@ -625,7 +633,8 @@ header {
     margin: 10% 0.5% 10% 0.5%;
     width: 46%; }
     #portfolio section:hover {
-      box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); }
+      -webkit-box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21);
+              box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); }
     @media screen and (max-width: 600px) {
       #portfolio section {
         width: 460px; } }
