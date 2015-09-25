@@ -117,6 +117,14 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    // Smooth scroll links that BEGIN with '#' but not links with ONLY '#'
+    // (so clicking on the logo still brings you to the top)
+    $('a[href^=#]').not('a[href=#]').on('click', function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+    });
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
     (function(b, o, i, l, e, r) {
