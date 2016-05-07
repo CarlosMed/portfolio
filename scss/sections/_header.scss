@@ -1,0 +1,41 @@
+//                           Header                      //
+header {
+  color: $dark;
+  position: relative;
+  height: 100vh;
+
+  .h-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    @media screen and (max-width:600px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    p {
+      &:first-child {
+        font-size: 2.5em;
+        font-weight: 700;
+        min-height: 100px;
+
+        @media screen and (min-width:600px) {
+          min-height: 60px;
+        }
+
+      }
+
+    }
+
+    button {
+      @extend .buttons;
+    }
+
+  }
+
+}

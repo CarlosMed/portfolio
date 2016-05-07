@@ -1,0 +1,66 @@
+body {
+    background-color: #ECE5DD;
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-form {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.scores {
+    margin: 30px auto 0 auto;
+    border-collapse: collapse;
+}
+
+.us
+
+.bar {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+}
+
+.game-board {
+    border: 2px solid rgba(229, 214, 183, 0.2);
+    border-collapse: collapse;
+    width: 350px;
+    background-color: rgba(206, 147, 149, 0.5);
+    height: 100px;
+    text-align: center;
+}
+
+.top,
+.middle,
+.bottom {
+    width: 30px;
+    height: 30px;
+    font-size: 2em;
+}
+
+tr,
+table,
+td,
+th {
+    border: 1px solid rgba(165, 129, 93, 0.4);
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 5px;
+}

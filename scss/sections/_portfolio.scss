@@ -1,0 +1,77 @@
+//                           Portfolio                      //
+#portfolio {
+  color: $dark;
+  text-align: center;
+
+  section {
+    margin: 10% 0.5% 5% 0.5%;
+    width: 46%;
+
+    &:hover {
+      animation: shadow 2s forwards;
+
+      @keyframes shadow {
+        0% {
+          box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.0);
+        }
+
+        50% {
+          box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        100% {
+          box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21);
+        }
+
+      }
+
+    }
+
+    @media screen and (max-width:600px) {
+      width: 460px;
+    }
+
+  }
+
+  h2 {
+    font-size: 4em;
+    font-weight: $bold;
+    margin-top: 10%;
+
+    @media screen and (max-width:600px) {
+      font-size: 2.5em;
+    }
+
+  }
+
+  h4 {
+    font-size: 1.8em;
+    font-weight: $bold;
+    margin-top: 10%;
+  }
+
+  p {
+    margin: 6% 16px 10% 16px;
+    padding: 0 20px 0 20px;
+    font-size: 1.2em;
+    font-weight: $light;
+    text-align: justify;
+  }
+
+  button {
+    @extend .buttons;
+    margin-bottom: 40px;
+  }
+
+}
+
+.flex-container {
+  display: flex;
+  // border: 10px solid red;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+img {
+  width: 100%;
+}

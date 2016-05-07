@@ -1,0 +1,27 @@
+.buttons {
+    background: none;
+    color: $dark;
+    width: 200px;
+    height: 50px;
+
+    &:hover {
+        cursor: pointer;
+        animation: fill 2s linear forwards;
+    }
+
+    @keyframes fill {
+        0% {
+            background: none;
+        }
+
+        50% {
+            background: #fff;
+        }
+
+        100% {
+            background: #fff;
+        }
+
+    }
+
+}
