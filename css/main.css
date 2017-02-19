@@ -143,6 +143,12 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -156,7 +162,8 @@ textarea {
     color: #000 !important;
     /* Black prints faster:
        http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important; }
   a,
   a:visited {
@@ -368,7 +375,8 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 /**
@@ -474,7 +482,8 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -495,7 +504,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 2 */ }
 
 /**
@@ -568,6 +578,9 @@ button {
 .buttons, header .h-container button, #about-me .a-container button, #portfolio button {
   background: none;
   color: #909698;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
   width: 200px;
   height: 50px; }
   .buttons:hover, header .h-container button:hover, #about-me .a-container button:hover, #portfolio button:hover {
@@ -616,7 +629,7 @@ button {
     .logo {
       position: absolute;
       top: 6px;
-      width: 12%;
+      width: 8%;
       margin-bottom: 32px; } }
 
 header {
@@ -648,13 +661,11 @@ header {
           min-height: 60px; } }
 
 #about-me {
-  padding: 18% 6%;
   background: #272624;
   color: #909698;
   text-align: center; }
   #about-me .a-container {
-    border: 2px solid #909698;
-    padding: 6%; }
+    padding: 4%; }
     #about-me .a-container h2 {
       font-size: 2.5em; }
       @media screen and (min-width: 600px) {
@@ -676,7 +687,7 @@ header {
   color: #909698;
   text-align: center; }
   #portfolio section {
-    margin: 10% 0.5% 5% 0.5%;
+    margin: 5% 0.5% 5% 0.5%;
     width: 46%; }
     #portfolio section:hover {
       -webkit-animation: shadow 2s forwards;
@@ -684,22 +695,31 @@ header {
 
 @-webkit-keyframes shadow {
   0% {
-    box-shadow: -12px 19px 92px 3px transparent; }
+    -webkit-box-shadow: -12px 19px 92px 3px transparent;
+            box-shadow: -12px 19px 92px 3px transparent; }
   50% {
-    box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12); }
+    -webkit-box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12); }
   100% {
-    box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); } }
+    -webkit-box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21);
+            box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); } }
 
 @keyframes shadow {
   0% {
-    box-shadow: -12px 19px 92px 3px transparent; }
+    -webkit-box-shadow: -12px 19px 92px 3px transparent;
+            box-shadow: -12px 19px 92px 3px transparent; }
   50% {
-    box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12); }
+    -webkit-box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.12); }
   100% {
-    box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); } }
+    -webkit-box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21);
+            box-shadow: -12px 19px 92px 3px rgba(0, 0, 0, 0.21); } }
     @media screen and (max-width: 600px) {
       #portfolio section {
-        width: 460px; } }
+        width: 100%; } }
+    @media screen and (min-width: 1215px) {
+      #portfolio section {
+        width: 26%; } }
   #portfolio h2 {
     font-size: 4em;
     font-weight: 700;
@@ -718,7 +738,10 @@ header {
     font-weight: 300;
     text-align: justify; }
   #portfolio button {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
 
 .flex-container {
   display: -webkit-box;
@@ -740,11 +763,9 @@ footer {
   color: #909698;
   text-align: center; }
   footer .panel-footer {
-    padding: 20% 3%;
     font-size: 1.2em;
     background: #272624; }
     footer .panel-footer .center {
-      border: 2px solid #909698;
       padding: 8%; }
     footer .panel-footer h3 {
       font-size: 1.3em;
