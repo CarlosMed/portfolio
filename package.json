@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosmed/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Carlos Medina (http://carlos-medina.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlosmed/portfolio/issues"
+  },
+  "homepage": "https://github.com/carlosmed/portfolio#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
