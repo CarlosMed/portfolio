@@ -1,4 +1,4 @@
-var Game = function() {
+var Game = function () {
     this.initialize();
 };
 
@@ -10,7 +10,7 @@ Game.prototype.play = false;
 
 Game.prototype.whosTurn = "";
 
-Game.prototype.initialize = function() {
+Game.prototype.initialize = function () {
     var play = document.querySelector("#start");
     var reset = document.querySelector("#reset");
 
@@ -18,7 +18,7 @@ Game.prototype.initialize = function() {
     reset.addEventListener("click", this.resetGame, false);
 };
 
-Game.prototype.beginGame = function(e) {
+Game.prototype.beginGame = function (e) {
     e.preventDefault();
     var thisObject = Game.prototype;
     var playerXName = document.querySelector("#playerOne").value;
@@ -29,10 +29,12 @@ Game.prototype.beginGame = function(e) {
 
     thisObject.setup();
 };
-Game.prototype.resetGame = function(e) {
+
+Game.prototype.resetGame = function (e) {
 
 };
-Game.prototype.setup = function() {
+
+Game.prototype.setup = function () {
     var selectPlayerX = document.querySelectorAll(".playerOne");
     var selectPlayerO = document.querySelectorAll(".playerTwo");
     var tabelCells = document.querySelectorAll("td");
@@ -50,7 +52,7 @@ Game.prototype.setup = function() {
     this.whoGoesFirst();
 }
 
-Game.prototype.whoGoesFirst = function() {
+Game.prototype.whoGoesFirst = function () {
     var value = Math.random() * 2;
     value = Math.round(value);
 
@@ -59,12 +61,11 @@ Game.prototype.whoGoesFirst = function() {
     this.whosTurn = (value > 1) ? "x" : "o";
 }
 
-Game.prototype.displayText = function(text) {
+Game.prototype.displayText = function (text) {
     document.querySelector("#game-text").textContent = text;
 }
 
-
-Game.prototype.logic = function(e) {
+Game.prototype.logic = function (e) {
     var thisObject = Game.prototype;
     e.target.textContent = thisObject.whosTurn;
     thisObject.whosTurn = thisObject.whosTurn === "x" ? "o" : "x";
@@ -86,7 +87,7 @@ Game.prototype.logic = function(e) {
     }
 }
 
-Game.prototype.isGameOver = function() {
+Game.prototype.isGameOver = function () {
     var topRow = this.topRowWins();
     var middleRow = this.middleRowWins();
     var bottomRow = this.bottomRowWins();
@@ -108,7 +109,7 @@ Game.prototype.isGameOver = function() {
     }
 }
 
-Game.prototype.topRowWins = function() {
+Game.prototype.topRowWins = function () {
     var topRow = document.querySelectorAll(".top");
 
     var x = 0;
@@ -127,7 +128,8 @@ Game.prototype.topRowWins = function() {
         return false;
     }
 }
-Game.prototype.middleRowWins = function() {
+
+Game.prototype.middleRowWins = function () {
     var middleRow = document.querySelectorAll(".middle");
 
     var x = 0;
@@ -146,7 +148,8 @@ Game.prototype.middleRowWins = function() {
         return false;
     }
 }
-Game.prototype.bottomRowWins = function() {
+
+Game.prototype.bottomRowWins = function () {
     var bottomRow = document.querySelectorAll(".bottom");
 
     var x = 0;
@@ -165,7 +168,8 @@ Game.prototype.bottomRowWins = function() {
         return false;
     }
 }
-Game.prototype.diagnolWinsLeft = function() {
+
+Game.prototype.diagnolWinsLeft = function () {
     var topLeft = document.querySelector("#t-left");
     var center = document.querySelector("#m-middle");
     var bottomRight = document.querySelector("#b-right");
@@ -187,7 +191,8 @@ Game.prototype.diagnolWinsLeft = function() {
         return false;
     }
 }
-Game.prototype.diagnolWinsRight = function() {
+
+Game.prototype.diagnolWinsRight = function () {
     var topRight = document.querySelector("#t-right");
     var center = document.querySelector("#m-middle");
     var bottomLeft = document.querySelector("#b-left");
