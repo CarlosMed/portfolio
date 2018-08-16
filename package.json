@@ -20,10 +20,8 @@
     "type": "git",
     "url": "git+https://github.com/carlosmed/portfolio.git"
   },
-  "keywords": [
-    "portfolio"
-  ],
-  "author": "Carlos Medina <carlos.w.med@gmail.com> (http://carlos-medina.me)",
+  "keywords": [],
+  "author": "Carlos Medina (http://carlos-medina.me/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/carlosmed/portfolio/issues"
