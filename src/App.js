@@ -7,7 +7,10 @@ class App extends Component {
       <main>
         <header>
           <div className="img-container">
-            <img src="https://source.unsplash.com/random" alt="" />
+            <img
+              src="https://github.com/CarlosMed/portfolio/blob/dev/src/images/me.jpg?raw=true"
+              alt=""
+            />
             <div className="grid">
               <div className="item" />
               <div className="item" />
