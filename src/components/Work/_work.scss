@@ -11,21 +11,21 @@
     grid-template-rows: repeat(2, 1fr);
 
     &:nth-child(1n) {
-      background: var(--pink);
+      background: $pink;
     }
 
     &:nth-child(2n) {
-      background: var(--purple) url('https://source.unsplash.com/random?v=1')
+      background: $purple url('https://source.unsplash.com/random?v=1')
         center no-repeat;
       background-size: cover;
     }
 
     &:nth-child(3n) {
-      background: var(--darkPink);
+      background: $darkPink;
     }
 
     &:nth-child(4n) {
-      background: var(--darkPink) url('https://source.unsplash.com/random?v=2')
+      background: $darkPink url('https://source.unsplash.com/random?v=2')
         center no-repeat;
       background-size: cover;
     }
@@ -35,7 +35,7 @@
     }
 
     &:nth-child(6n) {
-      background: var(--purple);
+      background: $purple;
     }
 
     p {
@@ -46,6 +46,7 @@
       margin-right: 20px;
       margin-bottom: 10px;
       color: white;
+      font-family: $roboto;
     }
 
     span {

@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:700');
 
-:root {
-  --black: #17293f;
-  --white: white;
-  --grey: #8b8d98;
-  --pink: #dda6bd;
-  --darkPink: #ba77ba;
-  --purple: #5a63a8;
-  --roboto: 'Roboto Mono', monospace;
-  --slab: 'Roboto Slab', serif;
-}
+$black: #17293f;
+$white: white;
+$grey: #8b8d98;
+$pink: #dda6bd;
+$darkPink: #ba77ba;
+$purple: #5a63a8;
+$roboto: 'Roboto Mono', monospace;
+$slab: 'Roboto Slab', serif;
 
 @import 'components/About/about';
 @import 'components/Header/header';
