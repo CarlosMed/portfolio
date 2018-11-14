@@ -15,13 +15,18 @@ export function Header() {
           <div className="item" />
           <div className="item" />
           <div className="item" />
+          <div className="item" />
+          <div className="item" />
+          <div className="item" />
         </div>
       </div>
       <nav>
         <ul>
-          <li>About</li>
-          <li>Email</li>
-          <li>Codepen</li>
+          <a href="mailto:carlos.w.med@gmail.com?subject=Hello" target="_blank" rel="noopener noreferrer"><li>Email</li></a>
+          <a href="/about"><li>About</li></a>
+          <a href="https://www.linkedin.com/in/carlosmed/" target="_blank" rel="noopener noreferrer"><li>LinkedIn</li></a>
+          <a href="https://github.com/carlosmed" target="_blank" rel="noopener noreferrer"><li>Github</li></a>
+          <a href="https://codepen.io/carlosmed" target="_blank" rel="noopener noreferrer"><li>Codepen</li></a>
         </ul>
       </nav>
     </header>
