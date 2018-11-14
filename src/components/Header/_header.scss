@@ -6,7 +6,6 @@ header {
   img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
     grid-area: 1 / 1 / -1 / -1;
   }
@@ -23,6 +22,7 @@ header {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     display: grid;
+    grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     list-style: none;
@@ -32,33 +32,35 @@ header {
       font-size: 0.8rem;
       color: $black;
       letter-spacing: 0.2px;
+      font-family: $roboto;
+      cursor: pointer;
     }
   }
 
   .img-container {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 1;
-  overflow: hidden;
-
-  .grid {
+    width: 100%;
     height: 100%;
-    grid-area: 1 / 1 / -1 / -1;
     display: grid;
-    grid-template-areas:
-      'item item item'
-      'item item item';
-    grid-gap: 20px;
-    position: relative;
-    z-index: 2;
-    background: white;
-    mix-blend-mode: lighten;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    overflow: hidden;
 
-    .item {
-      background-color: black;
+    .grid {
+      height: 100%;
+      grid-area: 1 / 1 / -1 / -1;
+      display: grid;
+      grid-template-areas:
+        'item item item'
+        'item item item';
+      grid-gap: 8px;
+      position: relative;
+      z-index: 2;
+      background: white;
+      mix-blend-mode: lighten;
+
+      .item {
+        background-color: black;
+      }
     }
   }
-}
 }
