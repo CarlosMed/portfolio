@@ -7,6 +7,10 @@
   justify-content: space-around;
   flex-direction: column;
 
+  @media screen and (min-width: 720px) {
+    grid-column: 2 / 5;
+  }
+
   h1,
   h2 {
     color: $black;

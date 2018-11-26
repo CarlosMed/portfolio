@@ -3,6 +3,10 @@ header {
   display: grid;
   grid-template-columns: 1fr 50px;
 
+  @media screen and (min-width: 720px) {
+    grid-column: 1 / 2;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -28,12 +32,13 @@ header {
     list-style: none;
     padding: 0;
 
-    li {
+    li > a {
       font-size: 0.8rem;
       color: $black;
       letter-spacing: 0.2px;
       font-family: $roboto;
       cursor: pointer;
+      text-decoration: none;
     }
   }
 
