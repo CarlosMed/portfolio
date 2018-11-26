@@ -7,7 +7,7 @@ import './App.scss';
 class App extends Component {
   render() {
     return (
-      <main>
+      <>
         <Header />
 
         <About />
@@ -17,7 +17,7 @@ class App extends Component {
         </div>
 
         <Work />
-      </main>
+      </>
     );
   }
 }
