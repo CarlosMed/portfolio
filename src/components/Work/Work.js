@@ -19,14 +19,6 @@ export function Work() {
         <p>ToDiddlyDo</p>
         <span>+</span>
       </div>
-      <div className="job">
-        <p>More to Come</p>
-        <span>+</span>
-      </div>
-      <div className="job">
-        <p>name06</p>
-        <span>+</span>
-      </div>
     </section>
   );
 }
