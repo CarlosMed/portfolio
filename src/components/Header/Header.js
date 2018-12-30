@@ -4,10 +4,7 @@ export function Header() {
   return (
     <header>
       <div className="img-container">
-        <img
-          src="https://github.com/CarlosMed/portfolio/blob/dev/src/images/me.jpg?raw=true"
-          alt=""
-        />
+        <img src="https://source.unsplash.com/collection/907185" alt="" />
         <div className="grid">
           <div className="item" />
           <div className="item" />
