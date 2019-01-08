@@ -1,0 +1,48 @@
+.description {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    grid-row: 1;
+  }
+
+  .left {
+    width: 100%;
+    grid-row: 2;
+
+    h2 {
+      font-family: $slab;
+      padding: 0 20px;
+      font-size: 1rem;
+    }
+
+    p {
+      font-family: $roboto;
+      padding: 0 20px 10px 20px;
+      color: $grey;
+      font-size: 0.8rem;
+      letter-spacing: 0.2px;
+      line-height: 1.5;
+    }
+
+    ul {
+      padding: 0 20px;
+      font-family: $roboto;
+      color: $grey;
+      letter-spacing: 0.2px;
+      font-size: 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-gap: 10px;
+
+      li {
+        list-style: none;
+        justify-self: center;
+      }
+    }
+  }
+}
