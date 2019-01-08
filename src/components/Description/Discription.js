@@ -5,28 +5,59 @@ class Description extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: [],
+      content: null,
     };
   }
 
   componentDidMount() {
-    /**
-     * TODO: Sort the info out so that it can be pushed to the state in content
-     */
     client.getEntries().then(entries => {
       let items = entries.items;
       let content = items
         .map(entry => entry)
-        .find( item => item.fields.slug === this.props.match.url.replace( '/', '' ));
+        .find(
+          item => item.fields.slug === this.props.match.url.replace('/', '')
+        );
 
       this.setState({
-        content
-      })
+        content,
+      });
     });
   }
 
+  getJobDescription() {
+    const {
+      description,
+      title,
+      workImage,
+      technologies,
+    } = this.state.content.fields;
+
+    return (
+      <>
+        <img src={workImage === undefined ? '' : workImage.fields.file.url } alt={title} />
+        <div className="left">
+          <h2>{title}</h2>
+          <ul>
+            {technologies.map(technology => (
+              <li>{technology}</li>
+            ))}
+          </ul>
+          <p>{description}</p>
+        </div>
+      </>
+    );
+  }
+
   render() {
-    return <h1>{this.props.match.url}</h1>;
+    const { content } = this.state;
+    console.log(this.state.content !== null && this.state.content.fields);
+    return (
+      <>
+        {content !== null && (
+          <div className="description">{this.getJobDescription()}</div>
+        )}
+      </>
+    );
   }
 }
 
