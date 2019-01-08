@@ -9,9 +9,10 @@ $purple: #5a63a8;
 $roboto: 'Roboto Mono', monospace;
 $slab: 'Roboto Slab', serif;
 
-@import 'components/About/about';
-@import 'components/Header/header';
-@import 'components/Work/work';
+@import 'components/Home/About/about';
+@import 'components/Home/Header/header';
+@import 'components/Home/Work/work';
+@import 'components/Description/description';
 
 * {
   &:before &:after {
@@ -38,15 +39,18 @@ body {
 
 main {
   height: 100%;
+}
+
+.main {
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr) 50px;
-  grid-template-rows: 400px 475px repeat(3, 1fr);
+  grid-template-rows: 400px 475px 300px;
   grid-auto-flow: column;
 
   @media screen and (min-width: 820px) {
-    // grid-template-columns: 350px 200px 1fr;
-    grid-template-columns: initial;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: initial;
   }
 }
