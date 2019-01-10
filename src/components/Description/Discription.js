@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { client } from '../../helpers/contentful';
+import { client } from '../../helpers/helpers';
+import JobDescription from './JobDescription';
+import('devicon');
 
 class Description extends Component {
   constructor(props) {
@@ -24,33 +26,27 @@ class Description extends Component {
     });
   }
 
-  getJobDescription() {
-    const {
-      description,
-      title,
-      workImage,
-      technologies,
-    } = this.state.content.fields;
+  handleNext = () => {
+    console.log('next');
+  };
 
+  handlePrev = () => {
+    console.log('prev');
+  };
+
+  getJobDescription = () => {
     return (
-      <>
-        <img src={workImage === undefined ? '' : workImage.fields.file.url } alt={title} />
-        <div className="left">
-          <h2>{title}</h2>
-          <ul>
-            {technologies.map(technology => (
-              <li>{technology}</li>
-            ))}
-          </ul>
-          <p>{description}</p>
-        </div>
-      </>
+      <JobDescription
+        job={this.state.content.fields}
+        handleNext={this.handleNext}
+        handlePrev={this.handlePrev}
+      />
     );
-  }
+  };
 
   render() {
     const { content } = this.state;
-    console.log(this.state.content !== null && this.state.content.fields);
+
     return (
       <>
         {content !== null && (

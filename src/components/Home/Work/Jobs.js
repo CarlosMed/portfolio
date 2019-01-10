@@ -1,6 +1,6 @@
 import { Job } from './Job';
 import React, { Component } from 'react';
-import { client } from '../../../helpers/contentful';
+import { client } from '../../../helpers/helpers';
 
 class Jobs extends Component { constructor(props) {
     super(props);
