@@ -30,10 +30,11 @@
       margin-top: 20px;
       width: 100%;
 
-      .next,
-      .prev {
+      button {
         user-select: none;
         cursor: pointer;
+        border: none;
+        font-size: 1.1rem;
       }
 
       b {
