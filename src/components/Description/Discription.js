@@ -7,37 +7,68 @@ class Description extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: null,
+      jobInfo: null,
+      jobLength: 0,
+      currentJobNumber: '',
     };
   }
 
   componentDidMount() {
     client.getEntries().then(entries => {
+      let jobLength = entries.total;
       let items = entries.items;
-      let content = items
+      let jobInfo = items
         .map(entry => entry)
         .find(
           item => item.fields.slug === this.props.match.url.replace('/', '')
         );
+      let currentJobNumber = entries.items
+        .map( entry => entry )
+        .findIndex(
+          item => item.fields.slug === this.props.match.url.replace( '/', '' )
+        ) + 1;
 
       this.setState({
-        content,
+        jobInfo,
+        jobLength,
+        currentJobNumber,
       });
     });
   }
 
   handleNext = () => {
-    console.log('next');
+    client.getEntries().then(entries => {
+      let items = entries.items;
+      let job = items
+        .map(entry => entry)
+        .findIndex(
+          item => item.fields.slug === this.props.match.url.replace('/', '')
+        );
+      const next = entries.items[job + 1].fields.slug;
+
+      return this.props.history.push(`/${next}`);
+    });
   };
 
-  handlePrev = () => {
-    console.log('prev');
-  };
+  handlePrev = () =>
+    client.getEntries().then(entries => {
+      let items = entries.items;
+      let job = items
+        .map(entry => entry)
+        .findIndex(
+          item => item.fields.slug === this.props.match.url.replace('/', '')
+        );
+      const prev = entries.items[job - 1].fields.slug;
+
+      return this.props.history.push(`/${prev}`);
+    });
 
   getJobDescription = () => {
     return (
       <JobDescription
-        job={this.state.content.fields}
+        jobInfo={this.state.jobInfo.fields}
+        jobLength={this.state.jobLength}
+        currentJobNumber={this.state.currentJobNumber}
         handleNext={this.handleNext}
         handlePrev={this.handlePrev}
       />
@@ -45,11 +76,11 @@ class Description extends Component {
   };
 
   render() {
-    const { content } = this.state;
+    const { jobInfo } = this.state;
 
     return (
       <>
-        {content !== null && (
+        {jobInfo !== null && (
           <div className="description">{this.getJobDescription()}</div>
         )}
       </>

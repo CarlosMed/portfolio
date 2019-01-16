@@ -2,8 +2,15 @@ import React from 'react';
 import { JobDescriptionNav } from './JobDescriptionNav';
 import { randomColor } from '../../helpers/helpers';
 
-const JobDescription = ({ job, handleNext, handlePrev, ...props }) => {
-  const { description, title, workImage, technologies, view, github } = job;
+const JobDescription = ({
+  jobInfo,
+  handleNext,
+  handlePrev,
+  jobLength,
+  currentJobNumber,
+  ...props
+}) => {
+  const { description, title, workImage, technologies, view, github } = jobInfo;
   const styles = { backgroundColor: randomColor() };
 
   return (
@@ -14,7 +21,12 @@ const JobDescription = ({ job, handleNext, handlePrev, ...props }) => {
         style={styles}
       />
       <div className="left">
-        <JobDescriptionNav handlePrev={handlePrev} handleNext={handleNext} />
+        <JobDescriptionNav
+          handlePrev={handlePrev}
+          handleNext={handleNext}
+          jobLength={jobLength}
+          currentJobNumber={currentJobNumber}
+        />
         <div className="title">
           <h2>{title}</h2>
           <div>

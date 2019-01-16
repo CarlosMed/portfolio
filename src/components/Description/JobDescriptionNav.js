@@ -1,21 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function JobDescriptionNav({ handlePrev, handleNext }) {
+export function JobDescriptionNav({
+  handlePrev,
+  handleNext,
+  jobLength,
+  currentJobNumber,
+}) {
   return (
     <div className="top">
-      <span className="prev" onClick={handlePrev}>
+      <button
+        className="prev"
+        onClick={handlePrev}
+        style={currentJobNumber === 1 ? { visibility: 'hidden' } : {}}
+        disabled={currentJobNumber === 1 ? true : false}>
         ⇠
-      </span>
+      </button>
       <p>
         <Link to={'/'} className="home">
           Home
         </Link>{' '}
-        - <b>01</b> / <b>04</b>
+        - <b>0{currentJobNumber}</b> / <b>0{jobLength}</b>
       </p>
-      <span className="next" onClick={handleNext}>
+      <button
+        className="next"
+        onClick={handleNext}
+        style={jobLength === currentJobNumber ? { visibility: 'hidden' } : {}}
+        disabled={jobLength === currentJobNumber ? true : false}>
         ⇢
-      </span>
+      </button>
     </div>
   );
 }
