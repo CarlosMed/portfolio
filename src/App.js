@@ -5,6 +5,22 @@ import Home from './components/Home/Home';
 import './App.scss';
 
 class App extends Component {
+  // fake authentication Promise
+  authenticate = () => new Promise(resolve => setTimeout(resolve, 2000));
+
+  componentDidMount = () =>
+    this.authenticate().then(() => {
+      const ele = document.querySelector('.loader');
+      if (ele) {
+        // fade out
+        ele.classList.add('leave');
+        setTimeout(() => {
+          // remove from DOM
+          ele.outerHTML = '';
+        }, 1700);
+      }
+    });
+
   render() {
     return (
       <>
