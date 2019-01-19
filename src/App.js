@@ -10,13 +10,14 @@ class App extends Component {
 
   componentDidMount = () =>
     this.authenticate().then(() => {
-      const ele = document.querySelector('.loader');
+      const ele = document.querySelector('.pace');
       if (ele) {
         // fade out
         ele.classList.add('leave');
         setTimeout(() => {
           // remove from DOM
           ele.outerHTML = '';
+          // document.querySelector('#root').style = 'block';
         }, 1700);
       }
     });
