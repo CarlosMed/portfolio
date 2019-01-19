@@ -27,9 +27,6 @@ export const Header = () => (
             </a>
           </li>
           <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
             <a
               href="https://www.linkedin.com/in/carlosmed/"
               target="_blank"
