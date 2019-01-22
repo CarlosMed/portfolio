@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:700');
+
+$black: #17293f;
+$white: white;
+$grey: #8b8d98;
+$pink: #dda6bd;
+$darkPink: #ba77ba;
+$purple: #5a63a8;
+$salmon: #eb6263;
+$roboto: 'Roboto Mono', monospace;
+$slab: 'Roboto Slab', serif;
+
+@import 'components/Home/About/about';
+@import 'components/Home/Header/header';
+@import 'components/Home/Work/work';
+@import 'components/Description/description';
+
+* {
+  &:before &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  height: 100%;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: var(--roboto);
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $salmon;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  font-family: $roboto;
+}
+
+main {
+  height: 100%;
+  display: block;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 50px;
+  grid-template-rows: 400px 475px 300px;
+  grid-auto-flow: column;
+
+  @media screen and (min-width: 820px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: initial;
+  }
+}
+
+.line-container {
+  grid-area: 2 / 4 / 3 / -1;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (min-width: 820px) {
+    display: none;
+  }
+
+  .line {
+    height: 150px;
+    width: 2px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(221, 166, 189, 0.5),
+      rgba(186, 188, 200, 0.3)
+    );
+  }
+}
