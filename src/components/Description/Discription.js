@@ -22,11 +22,12 @@ class Description extends Component {
         .find(
           item => item.fields.slug === this.props.match.url.replace('/', '')
         );
-      let currentJobNumber = entries.items
-        .map( entry => entry )
-        .findIndex(
-          item => item.fields.slug === this.props.match.url.replace( '/', '' )
-        ) + 1;
+      let currentJobNumber =
+        entries.items
+          .map(entry => entry)
+          .findIndex(
+            item => item.fields.slug === this.props.match.url.replace('/', '')
+          ) + 1;
 
       this.setState({
         jobInfo,
