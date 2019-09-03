@@ -7,8 +7,8 @@ interface JobDescriptionProps {
   jobInfo: JobInfoDestructed
   handleNext: () => void
   handlePrev: () => void
-  jobLength: string
-  currentJobNumber: string
+  jobLength: number
+  currentJobNumber: number
 }
 
 interface JobInfoDestructed {

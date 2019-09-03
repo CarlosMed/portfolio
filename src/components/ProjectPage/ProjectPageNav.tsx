@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 interface Props {
   handleNext: () => void
   handlePrev: () => void
-  jobLength: string
-  currentJobNumber: string
+  jobLength: number
+  currentJobNumber: number
 }
 
 export const ProjectPageNav: React.FC<Props> = ( {
@@ -15,11 +15,12 @@ export const ProjectPageNav: React.FC<Props> = ( {
   currentJobNumber,
 } ) =>  (
     <div className="top">
+      {console.log(typeof jobLength)}
       <button
         className="prev"
         onClick={handlePrev}
-        // style={currentJobNumber === 1 ? { visibility: 'hidden' } : {}}
-        // disabled={currentJobNumber === 1 ? true : false}
+        style={currentJobNumber === 1 ? { visibility: 'hidden' } : {}}
+        disabled={currentJobNumber === 1 ? true : false}
         >
         ⇠
       </button>

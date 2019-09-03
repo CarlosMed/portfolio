@@ -11,8 +11,8 @@ interface JobInfo {
 
 const ProjectPage: React.FC<Props> = ( { match, history } ) => {
   const [ jobInfo, setJobInfo ] = useState<any>( {} )
-  const [ jobLength, setJobLength ] = useState<string>( '' )
-  const [ currentJobNumber, setCurrentJobNumber ] = useState<string>( '' )
+  const [ jobLength, setJobLength ] = useState<number>( 0 )
+  const [ currentJobNumber, setCurrentJobNumber ] = useState<number>( 0 )
 
   useEffect( () => {
     client.getEntries().then( async ( entries: any ) => {
