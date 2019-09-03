@@ -1,19 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function JobDescriptionNav({
+interface Props {
+  handleNext: () => void
+  handlePrev: () => void
+  jobLength: string
+  currentJobNumber: string
+}
+
+export const ProjectPageNav: React.FC<Props> = ( {
   handlePrev,
   handleNext,
   jobLength,
   currentJobNumber,
-}) {
-  return (
+} ) =>  (
     <div className="top">
       <button
         className="prev"
         onClick={handlePrev}
-        style={currentJobNumber === 1 ? { visibility: 'hidden' } : {}}
-        disabled={currentJobNumber === 1 ? true : false}>
+        // style={currentJobNumber === 1 ? { visibility: 'hidden' } : {}}
+        // disabled={currentJobNumber === 1 ? true : false}
+        >
         ⇠
       </button>
       <p>
@@ -31,4 +38,3 @@ export function JobDescriptionNav({
       </button>
     </div>
   );
-}

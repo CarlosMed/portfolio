@@ -1,9 +1,9 @@
 import React from 'react';
-import Work from './Work/Jobs';
-import { Header } from './Header/Header';
 import { About } from './About/About';
+import { Header } from './Header/Header';
+import Work from './Work/Jobs';
 
-const Home = props => {
+const Home = () => {
   return <div className="main">
         <Header />
         <About />
