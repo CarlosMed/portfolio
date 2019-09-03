@@ -15,6 +15,7 @@ export const ProjectPageNav: React.FC<Props> = ( {
   currentJobNumber,
 } ) =>  (
     <div className="top">
+      {console.log(typeof jobLength)}
       <button
         className="prev"
         onClick={handlePrev}
