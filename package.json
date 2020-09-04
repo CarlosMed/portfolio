@@ -10,7 +10,7 @@
     "@types/react-router-dom": "^4.3.5",
     "contentful": "^7.0.5",
     "devicon": "^2.0.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router-dom": "^5.0.1",
