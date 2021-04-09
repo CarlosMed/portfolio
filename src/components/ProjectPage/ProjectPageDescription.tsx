@@ -1,6 +1,5 @@
 import 'devicon';
 import React from 'react';
-import { animated, Spring } from 'react-spring';
 import { ProjectPageNav } from './ProjectPageNav';
 
 interface JobDescriptionProps {
@@ -28,23 +27,11 @@ const ProjectPageDescription: React.FC<JobDescriptionProps> = ( {
   currentJobNumber,
 } ) => (
     <>
-      <Spring
-        native
-        from={{ opacity: 0, transform: 'translate3d(-100%, 0, 0)' }}
-        to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}>
-        {props => (
-          <animated.img
+          <img
             src={workImage !== undefined ? workImage.fields.file.url : ''}
-            style={props}
+            alt=""
           />
-        )}
-      </Spring>
-      <Spring
-        native
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}>
-        {props => (
-          <animated.div className="left" style={props}>
+          <div className="left">
             <ProjectPageNav
               handlePrev={handlePrev}
               handleNext={handleNext}
@@ -81,9 +68,8 @@ const ProjectPageDescription: React.FC<JobDescriptionProps> = ( {
               ) )}
             </ul>
             <p>{description}</p>
-          </animated.div>
-        )}
-      </Spring>
+          </div>
+        )
     </>
   )
 

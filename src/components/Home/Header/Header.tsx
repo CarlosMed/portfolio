@@ -1,5 +1,6 @@
+// @ts-nocheck
 import React from 'react';
-import { Spring, animated } from 'react-spring';
+import { animated, Spring } from 'react-spring';
 
 export const Header = () => (
   <Spring

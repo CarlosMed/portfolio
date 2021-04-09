@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface Props {
-  jobs: JobProps
-}
-
 interface JobProps {
-  title: string
-  slug: string
-  workImage: any
+  jobs: {
+    title: string
+    slug: string
+    workImage: any
+  }
 }
 
-export const Job: React.FC<Props> = ( { jobs: { title, slug, workImage } } ) => (
+export const Job = ( { jobs: { title, slug, workImage } }: JobProps ) => (
   <>
     <img
       src={workImage !== undefined ? workImage.fields.file.url : ''}
