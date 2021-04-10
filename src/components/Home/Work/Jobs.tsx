@@ -23,9 +23,9 @@ const Jobs = () => {
     <section className='jobs'>
       {jobs.length > 0 && jobs.map( ( { fields, sys }: ContentProps ) => {
         return (
-          <div className='job' key={sys.id}>
+          <React.Fragment key={sys.id}>
             <Job jobs={fields} />
-          </div>
+          </React.Fragment>
         )
       }
       )}

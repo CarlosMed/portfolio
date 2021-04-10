@@ -9,13 +9,15 @@ interface FieldProps {
   }
 }
 
-export const Job = ( {jobs: { title, slug, workImage }}: FieldProps ) => (
+export const Job = ( { jobs: { title, slug, workImage } }: FieldProps ) => (
   <>
-    <img
-      src={workImage !== undefined ? workImage.fields.file.url : ''}
-      alt={title}
-    />
-    <p>{title}</p>
-    <Link to={`/${slug.toString()}`}>+</Link>
+    <Link className='job' to={`/${slug.toString()}`}>
+      <img
+        src={workImage !== undefined ? workImage.fields.file.url : ''}
+        alt={title}
+      />
+      <p>{title}</p>
+      <span>+</span>
+    </Link>
   </>
 );
