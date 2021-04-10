@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface JobProps {
+interface FieldProps {
   jobs: {
     title: string
     slug: string
@@ -9,7 +9,7 @@ interface JobProps {
   }
 }
 
-export const Job = ( { jobs: { title, slug, workImage } }: JobProps ) => (
+export const Job = ( {jobs: { title, slug, workImage }}: FieldProps ) => (
   <>
     <img
       src={workImage !== undefined ? workImage.fields.file.url : ''}

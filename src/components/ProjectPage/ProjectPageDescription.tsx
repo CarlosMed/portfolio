@@ -69,7 +69,6 @@ const ProjectPageDescription: React.FC<JobDescriptionProps> = ( {
             </ul>
             <p>{description}</p>
           </div>
-        )
     </>
   )
 

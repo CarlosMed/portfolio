@@ -4,10 +4,6 @@ import { client } from '../../helpers/helpers';
 import ProjectPageDescription from './ProjectPageDescription';
 
 interface Props extends RouteComponentProps { }
-interface JobInfo {
-  sys?: object
-  fields: object
-}
 
 const ProjectPage: React.FC<Props> = ( { match, history } ) => {
   const [ jobInfo, setJobInfo ] = useState<any>( {} )
