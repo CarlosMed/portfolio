@@ -13,6 +13,7 @@ const Jobs = () => {
       workImage: any
     }
   }
+
   const [ jobs, setJobs ] = useState( [] );
 
   useEffect( () => {

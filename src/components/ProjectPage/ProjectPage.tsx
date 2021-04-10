@@ -29,7 +29,7 @@ const ProjectPage: React.FC<Props> = ( { match, history } ) => {
             ( item: any ) => item.fields.slug === match.url.replace( '/', '' )
           ) + 1 )
     } );
-  }, [] )
+  }, [match.url] )
 
   const handleNext = (): void => {
     client.getEntries().then( ( entries: any ) => {
