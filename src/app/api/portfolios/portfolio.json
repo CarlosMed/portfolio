@@ -1,0 +1,32 @@
+[
+  {
+      "id": "1",
+      "title": "Life Made",
+      "description": "A web app to help people with disabilities.",
+      "url": "https://lifemade.com",
+      "localURL": "/lifemade",
+      "category": "Website",
+      "imageUrl": "https://picsum.photos/400",
+      "featured": true
+  },
+  {
+      "id": "2",
+      "title": "Trailer Store",
+      "description": "A web app to help people with disabilities.",
+      "url": "https://trailerstore.com",
+      "localURL": "/trailerstore",
+      "category": "Website",
+      "imageUrl": "https://picsum.photos/400",
+      "featured": false
+  },
+  {
+      "id": "3",
+      "title": "SAF Technologies",
+      "description": "A web app to help people with disabilities.",
+      "url": "https://saftech.com",
+      "localURL": "/saftech",
+      "category": "Website",
+      "imageUrl": "https://picsum.photos/400",
+      "featured": false
+  }
+]
