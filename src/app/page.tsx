@@ -34,47 +34,34 @@ const forFun = {
   list: ["Figma", "Games", "Virtualization", "Home Automation"],
 };
 
-const portfolioList = [
-  {
-    title: "Life Made",
-    description: "A web app to help people with disabilities.",
-    url: "https://lifemade.com",
-    localURL: "/lifemade",
-    category: "Website",
-    imageUrl: "https://picsum.photos/400",
-  },
-  {
-    title: "Trailer Store",
-    description: "A web app to help people with disabilities.",
-    url: "https://trailerstore.com",
-    localURL: "/trailerstore",
-    category: "Website",
-    imageUrl: "https://picsum.photos/400",
-  },
-  {
-    title: "SAF Technologies",
-    description: "A web app to help people with disabilities.",
-    url: "https://saftech.com",
-    localURL: "/saftech",
-    category: "Website",
-    imageUrl: "https://picsum.photos/400",
-  },
-];
+const fetchPortfolio = async () => {
+  const res = await fetch('http://localhost:3000/api/portfolios')
+  const data = await res.json();
+  return data;
+}
 
-export default function Home() {
+export default async function Home() {
+  const portfolioList = await fetchPortfolio();
+
   return (
-    <main className="flex flex-grow flex-col space-y-5">
-      <section className="flex justify-between">
-        <Detail key={openFor.title} title={openFor.title} list={openFor.list} />
-        <Detail key={myStack.title} title={myStack.title} list={myStack.list} />
-      </section>
-      <About />
-      <section className="flex items-center justify-between">
+    <main className="flex flex-grow flex-col space-y-5 md:space-y-8">
+      <div className="items-center justify-between space-y-5 md:flex md:flex-row-reverse md:space-y-0">
+        <section className="flex max-w-lg grow justify-between rounded-3xl md:bg-olive md:p-8 md:text-eggshell md:space-x-11 md:ml-8">
+          <Detail key={openFor.title} title={openFor.title} list={openFor.list} />
+          <Detail key={myStack.title} title={myStack.title} list={myStack.list} />
+          <div className="hidden md:block">
+            <Detail key={forFun.title} title={forFun.title} list={forFun.list} />
+          </div>
+        </section>
+        <About />
+      </div>
+      <section className="flex items-center justify-between md:hidden">
         <Detail key={forFun.title} title={forFun.title} list={forFun.list} />
         <PortfolioSimpleCard portfolioList={portfolioList} />
-        <h2 className="font font-bold text-tan xs:hidden">Portfolio</h2>
+        <h2 className="font text-xl font-bold text-tan xs:hidden">Portfolio</h2>
       </section>
-      <Portfolio />
+      <h2 className="font hidden text-3xl font-bold text-tan md:flex">Portfolio</h2>
+      <Portfolio portfolioList={portfolioList} />
     </main>
   );
 }

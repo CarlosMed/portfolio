@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { Config} from "tailwindcss";
+import { screens } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -9,6 +10,7 @@ const config: Config = {
   theme: {
     screens: {
       xs: { max: "375px" },
+      ...screens,
     },
     extend: {
       colors: {
