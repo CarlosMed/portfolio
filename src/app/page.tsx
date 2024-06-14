@@ -34,7 +34,7 @@ const forFun = {
 };
 
 export default async function Home() {
-  const portfolioList = await useFetch('http://localhost:3000/api/portfolios');
+  const portfolioList = await useFetch('http://127.0.0.1:3000/api/portfolios');
 
   return (
     <>
