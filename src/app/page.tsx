@@ -51,7 +51,7 @@ export default async function Home() {
           </p>
           <p className="hidden md:block">With a keen eye for detail and an eye for frontend development, I thrive in crafting seamless user experiences while architecting robust backend systems.</p>
           <p className="hidden lg:block">
-            Beyond coding, I embrace a collaborative approach, thriving in dynamic teams where knowledge sharing and innovation flourish. I'm constantly exploring new technologies and seeking to push the boundaries of what's possible in the digital landscape. I have had the great pleasure in working on a diverse background collaboration with top industry leaders.
+            Beyond coding, I embrace a collaborative approach, thriving in dynamic teams where knowledge sharing and innovation flourish. I&apos;m constantly exploring new technologies and seeking to push the boundaries of what&apos;s possible in the digital landscape. I have had the great pleasure in working on a diverse background collaboration with top industry leaders.
           </p>
         </div>
       </section>
