@@ -1,7 +1,6 @@
-import About from "@/components/about/About";
 import Detail from "@/components/detail/Detail";
 import Portfolio from "@/components/portfolio/Portfolio";
-import PortfolioSimpleCard from "@/components/portfolio/PortfolioSimpleCard";
+import useFetch from "@/utils/useFetch";
 
 const openFor = {
   title: "I'm Open For",
@@ -34,34 +33,29 @@ const forFun = {
   list: ["Figma", "Games", "Virtualization", "Home Automation"],
 };
 
-const fetchPortfolio = async () => {
-  const res = await fetch('http://localhost:3000/api/portfolios')
-  const data = await res.json();
-  return data;
-}
-
 export default async function Home() {
-  const portfolioList = await fetchPortfolio();
+  const portfolioList = await useFetch('http://localhost:3000/api/portfolios');
 
   return (
-    <main className="flex flex-grow flex-col space-y-5 md:space-y-8">
-      <div className="items-center justify-between space-y-5 md:flex md:flex-row-reverse md:space-y-0">
-        <section className="flex max-w-lg grow justify-between rounded-3xl md:bg-olive md:p-8 md:text-eggshell md:space-x-11 md:ml-8">
+    <>
+      <section className="items-center justify-between space-y-4 md:flex md:flex-row-reverse">
+        <div className="flex grow justify-between md:max-w-lg md:rounded-2xl md:bg-olive md:p-8 md:text-eggshell">
           <Detail key={openFor.title} title={openFor.title} list={openFor.list} />
           <Detail key={myStack.title} title={myStack.title} list={myStack.list} />
           <div className="hidden md:block">
             <Detail key={forFun.title} title={forFun.title} list={forFun.list} />
           </div>
-        </section>
-        <About />
-      </div>
-      <section className="flex items-center justify-between md:hidden">
-        <Detail key={forFun.title} title={forFun.title} list={forFun.list} />
-        <PortfolioSimpleCard portfolioList={portfolioList} />
-        <h2 className="font text-xl font-bold text-tan xs:hidden">Portfolio</h2>
+        </div>
+        <div className="space-y-2 rounded-md bg-olive p-4 text-xs leading-relaxed text-eggshell md:max-w-sm md:space-y-4 md:bg-eggshell md:text-sm md:text-olive lg:max-w-xl">
+          <p> A passionate <span className="font-bold text-tan">Fullstack Engineer at Method</span> (not the soap company), a boutique consultancy agency specializing in innovative tech solutions.
+          </p>
+          <p className="hidden md:block">With a keen eye for detail and an eye for frontend development, I thrive in crafting seamless user experiences while architecting robust backend systems.</p>
+          <p className="hidden lg:block">
+            Beyond coding, I embrace a collaborative approach, thriving in dynamic teams where knowledge sharing and innovation flourish. I'm constantly exploring new technologies and seeking to push the boundaries of what's possible in the digital landscape. I have had the great pleasure in working on a diverse background collaboration with top industry leaders.
+          </p>
+        </div>
       </section>
-      <h2 className="font hidden text-3xl font-bold text-tan md:flex">Portfolio</h2>
       <Portfolio portfolioList={portfolioList} />
-    </main>
+    </>
   );
 }
