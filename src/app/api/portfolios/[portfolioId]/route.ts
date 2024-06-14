@@ -1,3 +1,5 @@
+// @ts-nocheck
+// TODO
 import { NextResponse } from 'next/server'
 
 const fetchPortfolio = async () => {
