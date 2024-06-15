@@ -1,6 +1,6 @@
+'use client'
 import Detail from "@/components/detail/Detail";
 import Portfolio from "@/components/portfolio/Portfolio";
-import useFetch from "@/utils/useFetch";
 
 const openFor = {
   title: "I'm Open For",
@@ -33,9 +33,9 @@ const forFun = {
   list: ["Figma", "Games", "Virtualization", "Home Automation"],
 };
 
-export default async function Home() {
-  const portfolioList = await useFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/portfolios`);
-
+export default function Home() {
+  // const portfolioList = await useFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/portfolios`);
+ 
   return (
     <>
       <section className="items-center justify-between space-y-4 md:flex md:flex-row-reverse">
@@ -55,7 +55,7 @@ export default async function Home() {
           </p>
         </div>
       </section>
-      <Portfolio portfolioList={portfolioList} />
+      <Portfolio />
     </>
   );
 }
