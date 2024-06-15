@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import Data from './portfolio.json'
+import Data from '../../../../public/portfolio.json'
 
 export const GET = async () => {
   return NextResponse.json(Data)
