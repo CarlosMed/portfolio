@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Khand, Inter } from "next/font/google";
 import "./globals.css";
+import PlausibleProvider from "next-plausible";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const khand = Khand({
@@ -11,7 +12,7 @@ const khand = Khand({
 
 export const metadata: Metadata = {
   title: `Carlos ⍛ Medina`,
-  description: "A portfolio for yours truly",
+  description: "Portfolio made by yours truly",
 };
 
 export default function RootLayout({
@@ -21,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <PlausibleProvider domain="cmed.dev" />
+      </head>
       <body className={`${khand.variable} ${inter.className} bg-white text-darkGreen`}>{children}</body>
     </html>
   );
