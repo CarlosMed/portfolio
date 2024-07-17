@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { withPlausibleProxy } from "next-plausible";
+const nextConfig = withPlausibleProxy()({});
 
 export default nextConfig;
