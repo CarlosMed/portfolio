@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Khand, Inter } from "next/font/google";
 import "./globals.css";
 import PlausibleProvider from "next-plausible";
+import Nav from "@/components/nav/Nav";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const khand = Khand({
@@ -21,13 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-pt-4 scroll-smooth">
       <head>
         <PlausibleProvider domain="cmed.dev" />
       </head>
+
       <body
-        className={`${khand.variable} ${inter.className} bg-white text-darkGreen`}
+        className={`${khand.variable} ${inter.className} relative flex flex-col items-center justify-center bg-white pb-24 text-darkGreen antialiased`}
       >
+        <Nav />
         {children}
       </body>
     </html>
