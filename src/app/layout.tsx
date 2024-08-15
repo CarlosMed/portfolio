@@ -3,6 +3,7 @@ import { Khand, Inter } from "next/font/google";
 import "./globals.css";
 import PlausibleProvider from "next-plausible";
 import Nav from "@/components/nav/Nav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const khand = Khand({
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

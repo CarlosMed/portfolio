@@ -35,11 +35,6 @@ export default function Home() {
           </div>
         </Section>
       </main>
-      <footer className="">
-        <p className="text-[clamp(2.85rem,30vw,5rem)] font-bold text-tan">
-          Lets Connect
-        </p>
-      </footer>
     </>
   );
 }
