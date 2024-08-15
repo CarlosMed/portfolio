@@ -1,5 +1,5 @@
 import React from "react";
-import { NAV_LIST } from "@/utils/constants";
+import { NAV_LIST } from "@/lib/constants";
 
 export default function Nav() {
   return (

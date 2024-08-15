@@ -6,3 +6,9 @@ export type SectionProps = {
   className: string;
   anchorName: string;
 };
+
+export type WorkListProp = {
+  id: number;
+  name: string;
+  year: string;
+};

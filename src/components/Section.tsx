@@ -1,4 +1,4 @@
-import { SectionProps } from "@/utils/types";
+import { SectionProps } from "@/lib/types";
 import React from "react";
 
 export default function Section({
