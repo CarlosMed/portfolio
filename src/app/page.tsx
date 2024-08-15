@@ -48,7 +48,7 @@ export default function Home() {
           </Section>
         </div>
         <Section title="Why" className="space-y-8" anchorName="work">
-          <div className="space-y-8">
+          <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
             {WORK_LIST.map(({ id, name, year }) => (
               <Card id={id} name={name} year={year} key={id} />
             ))}
