@@ -4,19 +4,21 @@ import { NAV_LIST } from "@/lib/constants";
 export default function Nav() {
   return (
     <>
-      <div className="fixed bottom-8 m-auto mx-auto flex h-16 w-11/12 items-center justify-around rounded-md bg-darkGreen text-white ">
-        {NAV_LIST.map(({ name, href }) => (
-          <a href={href} key={name}>
-            {name}
-          </a>
-        ))}
+      <nav className="fixed bottom-8 mx-auto flex h-16 w-11/12 max-w-2xl items-center justify-between rounded-md bg-darkGreen px-5 text-white">
+        <div className="space-x-12">
+          {NAV_LIST.map(({ name, href }) => (
+            <a href={href} key={name}>
+              {name}
+            </a>
+          ))}
+        </div>
         <a
           href="mailto:carlos.w.med@gmail.com"
           className="rounded-sm bg-tan px-4 py-2 font-semibold text-darkGreen"
         >
           Contact Me
         </a>
-      </div>
+      </nav>
     </>
   );
 }
