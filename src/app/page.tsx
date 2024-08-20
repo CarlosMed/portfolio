@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="space-y-5 px-4">
+      <main className="space-y-5 px-4 lg:space-y-44 lg:px-10">
         <Section title={"Who"} className="space-y-4 text-sm" anchorName="about">
           <p>
             A passionate fullstack senior engineer at Method (not the soap
@@ -28,7 +28,7 @@ export default function Home() {
           </p>
         </Section>
         <Section title="Why" className="space-y-8" anchorName="work">
-          <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
+          <div className="space-y-8">
             {WORK_LIST.map(({ id, name, year }) => (
               <Card id={id} name={name} year={year} key={id} />
             ))}
