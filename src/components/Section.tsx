@@ -9,9 +9,11 @@ export default function Section({
 }: SectionProps) {
   return (
     <section className={className} id={anchorName}>
-      <h3 className="font-khand text-4xl font-medium tracking-tight">
-        {title}
-      </h3>
+      {title && (
+        <h3 className="font-khand text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
+          {title}
+        </h3>
+      )}
       {children}
     </section>
   );

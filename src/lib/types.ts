@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
 export type SectionProps = {
-  title: string;
+  title?: string;
   children: ReactNode;
-  className: string;
-  anchorName: string;
   className?: string;
+  anchorName?: string;
 };
 
 export type WorkListProp = {

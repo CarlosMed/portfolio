@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .scroll {
+    @apply flex justify-between gap-4;
+  }
+
+  .logo {
+    @apply size-40 md:size-96 lg:size-96;
+  }
+}
+
 div > canvas {
   height: 40vh !important;
 }
