@@ -5,6 +5,7 @@ export type SectionProps = {
   children: ReactNode;
   className: string;
   anchorName: string;
+  className?: string;
 };
 
 export type WorkListProp = {
