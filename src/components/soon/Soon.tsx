@@ -46,7 +46,7 @@ export default function Soon() {
           <p>Carlos</p>
           <p>Medina</p>
         </div>
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-10">
           <p className="pl-3 text-2xl font-bold uppercase tracking-[0.75rem]">
             Website
           </p>
