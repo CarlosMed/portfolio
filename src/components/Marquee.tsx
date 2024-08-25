@@ -1,28 +1,22 @@
-import React from "react";
-import { CgFigma, CgFramer } from "react-icons/cg";
-import { FaGitAlt } from "react-icons/fa6";
-import { IoLogoVercel } from "react-icons/io5";
-import {
-  RiGithubFill,
-  RiNextjsFill,
-  RiReactjsLine,
-  RiTailwindCssFill,
-} from "react-icons/ri";
-import { SiPayloadcms } from "react-icons/si";
+"use client";
+import { motion } from "framer-motion";
 
-export default function Marquee() {
+export default function Marquee({ children, duration }) {
   return (
-    <div className="scroll">
-      <IoLogoVercel className="logo" />
-      <RiTailwindCssFill className="logo" />
-      <RiNextjsFill className="logo" />
-      <RiReactjsLine className="logo" />
-      <RiGithubFill className="logo" />
-      <IoLogoVercel className="logo" />
-      <RiTailwindCssFill className="logo" />
-      <RiNextjsFill className="logo" />
-      <RiReactjsLine className="logo" />
-      <RiGithubFill className="logo" />
+    <div className="flex ">
+      <motion.div
+        className="flex "
+        animate={{ x: `-50%` }}
+        transition={{
+          duration,
+          ease: "linear",
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      >
+        <div className="marquee">{children}</div>
+        <div className="marquee">{children}</div>
+      </motion.div>
     </div>
   );
 }

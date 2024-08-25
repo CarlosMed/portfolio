@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-  .scroll {
-    @apply flex justify-between gap-4;
+  .logo {
+    @apply size-10 lg:size-12;
   }
 
-  .logo {
-    @apply size-40 md:size-96 lg:size-96;
+  .marquee {
+    @apply flex gap-14 pl-14 lg:gap-20 lg:pl-20;
   }
 }
 
