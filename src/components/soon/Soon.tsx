@@ -54,7 +54,7 @@ export default function Soon() {
             href="Carlos_Medina_Resume.pdf"
             target="_blank"
             download
-            className="flex items-center justify-center space-x-2 rounded-lg bg-darkGreen px-4 py-3 text-xs tracking-wide text-white/90 hover:space-x-3 hover:bg-darkGreen/90 hover:text-white/100"
+            className="plausible-event-name=BtnClick:+View+Resume flex items-center justify-center space-x-2 rounded-lg bg-darkGreen px-4 py-3 text-xs tracking-wide text-white/90 hover:space-x-3 hover:bg-darkGreen/90 hover:text-white/100"
           >
             <span>View My Resume</span>
             <FaArrowRight />
