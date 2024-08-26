@@ -3,11 +3,11 @@ import { Khand, Inter } from "next/font/google";
 import "./globals.css";
 import PlausibleProvider from "next-plausible";
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const khand = Khand({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
-  variable: '--font-khand'
+  variable: "--font-khand",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,11 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="cmed.dev" />
       </head>
-      <body className={`${khand.variable} ${inter.className} bg-white text-darkGreen`}>{children}</body>
+      <body
+        className={`${khand.variable} ${inter.className} bg-white text-darkGreen`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
