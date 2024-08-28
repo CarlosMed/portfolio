@@ -2,13 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+*:root {
+  --darkgreen: 49 60 53;
+  --tan: 220 185 153;
+  --white: 252 255 253;
+}
+
+@layer base {
+  :root {
+    --darkgreen: var(--darkgreen);
+    --tan: var(--tan);
+    --white: var(--white);
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+body,
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--white)) rgb(var(--darkgreen));
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(var(--darkgreen));
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--white));
+  border-radius: 10px;
+  border: 5px solid rgb(var(--darkgreen));
+}
+
+/* Text Selection */
+::-moz-selection {
+  color: white;
+  background: rgb(220, 185, 153, 0.99);
+}
+::selection {
+  color: white;
+  background: rgb(220, 185, 153, 0.99);
+}
+
 @layer components {
+  .wrapper {
+    @apply w-full space-y-5 px-4 lg:space-y-20 lg:px-10;
+  }
+
   .logo {
     @apply size-10 lg:size-12;
   }
 
   .marquee {
-    @apply flex gap-14 pl-14 lg:gap-20 lg:pl-20;
+    @apply flex gap-16 pl-16 lg:gap-20 lg:pl-20;
   }
 }
 

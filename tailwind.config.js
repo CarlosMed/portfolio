@@ -9,9 +9,9 @@ module.exports = {
       },
     },
     colors: {
-      darkGreen: "#313C35",
-      tan: "#DCB999",
-      white: "#FCFFFD",
+      darkGreen: "rgb(var(--darkgreen) / <alpha-value>)",
+      tan: "rgb(var(--tan) / <alpha-value>)",
+      white: "rgb(var(--white) / <alpha-value>)",
     },
   },
   plugins: [],
