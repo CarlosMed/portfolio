@@ -31,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${khand.variable} ${inter.className} relative flex flex-col items-center justify-center bg-white pb-24 text-darkGreen antialiased lg:space-y-20`}
       >
+        <Name />
         <Nav />
         {children}
         <Footer />
