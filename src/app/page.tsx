@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="wrapper">
-        <div className="flex flex-col items-center justify-between space-y-5 lg:flex-row lg:space-x-16 lg:space-y-20">
+      <main className="wrapper sm:space-y-16">
+        <div className="flex flex-col items-center justify-between space-y-5 sm:space-y-16 lg:flex-row lg:space-x-16 lg:space-y-20">
           <Section
             title={"Who"}
             anchorName="about"
@@ -30,7 +30,7 @@ export default function Home() {
           >
             <About />
           </Section>
-          <Section className="flex w-full max-w-xl flex-col space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] lg:max-w-3xl lg:space-y-20">
+          <Section className="flex w-full max-w-xl flex-col space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] lg:max-w-2xl lg:space-y-20">
             <Marquee duration={12}>
               <IoLogoVercel className="logo" />
               <RiTailwindCssFill className="logo" />
@@ -38,7 +38,7 @@ export default function Home() {
               <RiReactjsLine className="logo" />
               <RiGithubFill className="logo" />
             </Marquee>
-            <Marquee duration={8}>
+            <Marquee duration={16}>
               <SiPayloadcms className="logo" />
               <FaGitAlt className="logo" />
               <CgFramer className="logo" />
@@ -48,7 +48,7 @@ export default function Home() {
           </Section>
         </div>
         <Section title="Why" className="space-y-8" anchorName="work">
-          <div className="space-y-8 md:grid md:grid-cols-2 md:justify-stretch md:gap-4 md:space-y-0 lg:gap-8">
+          <div className="space-y-5 md:grid md:grid-cols-2 md:justify-stretch md:gap-16 md:space-y-0 lg:gap-20">
             {WORK_LIST.map(({ id, name, year }) => (
               <Card id={id} name={name} year={year} key={id} />
             ))}
