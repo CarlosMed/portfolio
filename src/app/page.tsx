@@ -21,16 +21,16 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="w-full  space-y-5 px-4 lg:space-y-20 lg:px-10">
-        <div className="flex flex-col items-center justify-between space-y-5 lg:flex-row lg:space-y-20">
+      <main className="wrapper">
+        <div className="flex flex-col items-center justify-between space-y-5 lg:flex-row lg:space-x-16 lg:space-y-20">
           <Section
             title={"Who"}
             anchorName="about"
-            className="space-y-4 text-sm md:mt-5 lg:max-w-xl"
+            className="space-y-4 text-sm md:mt-5 lg:max-w-md"
           >
             <About />
           </Section>
-          <Section className="flex w-full flex-col space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] lg:space-y-20">
+          <Section className="flex w-full max-w-xl flex-col space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] lg:max-w-3xl lg:space-y-20">
             <Marquee duration={12}>
               <IoLogoVercel className="logo" />
               <RiTailwindCssFill className="logo" />
@@ -48,7 +48,7 @@ export default function Home() {
           </Section>
         </div>
         <Section title="Why" className="space-y-8" anchorName="work">
-          <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
+          <div className="space-y-8 md:grid md:grid-cols-2 md:justify-stretch md:gap-4 md:space-y-0 lg:gap-8">
             {WORK_LIST.map(({ id, name, year }) => (
               <Card id={id} name={name} year={year} key={id} />
             ))}
