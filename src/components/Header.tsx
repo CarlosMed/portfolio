@@ -15,7 +15,10 @@ export default function Header() {
           hell of a masterpiece through design and development.
         </p>
       </section>
-      <Spline scene={splineURL} className="col-span-full rounded-md" />
+      <Spline
+        scene={splineURL}
+        className="relative col-span-full rounded-md after:absolute after:inset-0 after:bg-black/0 after:content-['']"
+      />
     </header>
   );
 }
