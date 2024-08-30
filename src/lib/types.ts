@@ -12,3 +12,8 @@ export type WorkListProp = {
   name: string;
   year: string;
 };
+
+export type MarqueeProps = {
+  children: SectionProps["children"];
+  duration: number;
+};

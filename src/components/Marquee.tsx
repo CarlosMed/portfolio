@@ -1,7 +1,8 @@
 "use client";
+import { MarqueeProps } from "@/lib/types";
 import { motion } from "framer-motion";
 
-export default function Marquee({ children, duration }) {
+export default function Marquee({ children, duration }: MarqueeProps) {
   return (
     <motion.div
       className="flex w-fit"
