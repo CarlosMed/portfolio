@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Button from "../Button";
+import Button from "./Button";
 
 export default function Soon() {
   const mainRef = useRef(null);
