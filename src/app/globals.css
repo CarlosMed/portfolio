@@ -6,6 +6,7 @@
   --darkgreen: 49 60 53;
   --tan: 220 185 153;
   --white: 252 255 253;
+  --black: 15 19 17;
 }
 
 @layer base {
@@ -13,6 +14,7 @@
     --darkgreen: var(--darkgreen);
     --tan: var(--tan);
     --white: var(--white);
+    --black: var(--black);
   }
 }
 

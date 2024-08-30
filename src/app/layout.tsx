@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${khand.variable} ${inter.className} relative flex flex-col items-center justify-center space-y-5 bg-white pb-24 text-darkGreen sm:space-y-16 lg:space-y-10`}
+        className={`${khand.variable} ${inter.className} relative flex flex-col items-center justify-center space-y-5 bg-white pb-24 text-darkGreen sm:space-y-16 lg:space-y-10 dark:bg-black dark:text-white`}
       >
         <Name />
         <Nav />
