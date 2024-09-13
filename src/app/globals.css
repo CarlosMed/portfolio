@@ -60,6 +60,10 @@ html {
   .marquee {
     @apply flex gap-16 pl-16 lg:gap-20 lg:pl-20;
   }
+
+  .is-open {
+    @apply h-full;
+  }
 }
 
 div > canvas {
